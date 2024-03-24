@@ -31,4 +31,4 @@ and:
 cd subscriber
 dotnet run
 ```
-Next, click in F5 key to reload the UI, you can see the Topics and Subscriptions.
+Next, in your browser, click in F5 key to reload the UI, you can see the Topics and Subscriptions.
