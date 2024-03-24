@@ -12,5 +12,9 @@ services:
     networks:
       - gcp-demo
 
+  pub-sub-ui:
+      image: ghcr.io/neoscript/pubsub-emulator-ui:latest
+      ports:
+        - "7200:80"
 networks:
   gcp-demo:
