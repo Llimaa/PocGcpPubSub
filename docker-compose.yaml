@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  google-pub-sub:
+    image: messagebird/gcloud-pubsub-emulator:latest
+    environment:
+      - PUBSUB_PROJECT1=gcp-demo
+    expose:
+      - 8681
+    ports:
+      - "8681:8681"
+    networks:
+      - gcp-demo
+
+networks:
+  gcp-demo:
