@@ -1,34 +1,51 @@
 # Google Cloud Pub/Sub with .NET 8 and Docker
 
-This repository provides a environment for working with Google Cloud Pub/Sub using a Docker and .NET 
+This repository provides a publisher and subscriber example with GCP Pub/Sub. 
 
-For this example, we use a Google Cloud Pub/Sub Docker images: 
-    - https://github.com/marcelcorso/gcloud-pubsub-emulator
-    - ghcr.io/neoscript/pubsub-emulator-ui:latest
+This project provers a local environment for working with Google Cloud Pub/Sub using a Docker and .NET 
 
-See the docs here if you'd like to learn more: https://cloud.google.com/pubsub/docs/overview
-see the doc here if you'd like to know about the pubsub-emulator-ui project: https://github.com/NeoScript/pubsub-emulator-ui
+#### For this example, we use those Docker images: 
+- messagebird/gcloud-pubsub-emulator:latest
+- ghcr.io/neoscript/pubsub-emulator-ui:latest
+
+See the docs here if you'd like to learn more: 
+- https://cloud.google.com/pubsub/docs/overview
+- https://github.com/NeoScript/pubsub-emulator-ui
 
 
 ## Running the Code
 
+Clone the project
+
+```bash
+  git clone https://github.com/Llimaa/PocGcpPubSub
+```
+
+Go to the project directory
+
+```bash
+  cd PocGcpPubSub
+```
+Next, up docker environment
+
 ```
 docker-compose up
 ```
-Next, Open this path: http://localhost:7200 in your browser to see a pub/sub UI.
-For this default demo, in this UI, creating a new project with value: gcp-demo
 
 Next, run the publisher and the subscriber:
 
 ```
-cd publisher
+cd Publisher
 dotnet run
 ```
 
 and:
 
 ```
-cd subscriber
+cd Subscriber
 dotnet run
 ```
-Next, in your browser, click in F5 key to reload the UI, you can see the Topics and Subscriptions.
+
+Next, Open this path: http://localhost:7200 in your browser to see a pub/sub UI.
+
+For this default example, in your UI, create a new project with value: gcp-demo
