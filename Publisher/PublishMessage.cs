@@ -3,9 +3,9 @@ using Google.Api.Gax;
 
 namespace PopGCPPubSub.Publisher;
 
-public static class PublishMessage 
+public sealed class PublishMessage 
 {
-    public static  async Task PublishMessagesAsync(string projectId, string topicId, string message)
+    public static async Task PublishMessagesAsync(string projectId, string topicId, string message)
     {
         Console.WriteLine("Starting publisher...");
 
