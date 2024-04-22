@@ -9,4 +9,4 @@ var subscriptionId = "test-sub";
 
 await SubscribeMessage.InitialConfigAsync(projectId, topicId, subscriptionId);
 
-await SubscribeMessage.PullMessagesAsync(projectId, subscriptionId);
+await SubscribeMessage.GetMessagesAsync(projectId, subscriptionId);

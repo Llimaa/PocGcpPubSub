@@ -6,7 +6,7 @@ namespace PopGCPPubSub.Subscriber;
 
 public sealed class SubscribeMessage 
 {
-    public static async Task PullMessagesAsync(string projectId, string subscriptionId, bool acknowledge = true)
+    public static async Task GetMessagesAsync(string projectId, string subscriptionId, bool acknowledge = true)
     {
         var subscriptionName = new SubscriptionName(projectId, subscriptionId);
 
